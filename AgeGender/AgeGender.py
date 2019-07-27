@@ -51,7 +51,7 @@ if __name__ == '__main__':
     faceModel = "opencv_face_detector_uint8.pb"
 
     genderProto = "gender_deploy.prototxt"
-    genderModel = "/home/fedex/PycharmProjects/crisalix_pipeline/learnopencv/AgeGender/Model/gender_net.caffemodel"
+    genderModel = "/home/fedex/PycharmProjects/crisalix_pipeline/AgeGender/Model/gender_net.caffemodel"
 
     MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
     genderList = ['Male', 'Female']
@@ -63,9 +63,9 @@ if __name__ == '__main__':
     results = {}
     nr = 1
 
-    for el in os.listdir("/home/fedex/PycharmProjects/crisalix_pipeline/learnopencv/AgeGender/images"):
+    for el in os.listdir("/home/fedex/PycharmProjects/crisalix_pipeline/AgeGender/Model"):
         print("---------------------------------------------------------------------------")
-        el = os.path.join("/home/fedex/PycharmProjects/crisalix_pipeline/learnopencv/AgeGender/images", el)
+        el = os.path.join("/home/fedex/PycharmProjects/crisalix_pipeline/AgeGender/Model", el)
         # Open a video file or an image file or a camera stream
         try:
             cap = cv.VideoCapture(args.input if args.input else el)
